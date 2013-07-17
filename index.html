@@ -1,101 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>My First Bitstarter</title>
-    <link type="text/css" rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
-      }
-      .container {
-        width: 960px;
-      }
-      p.lead {
-        padding-top: 15px;
-      }
-      .navigation, .pitch, .section1, .section2, .faq, .footer {
-        padding: 10px 0px 10px 0px;
-      }
-      .video, .thermometer, .order, .social {
-        border: 1px dotted;
-        text-align: center;
-      }
-      .video {
-        /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
-        height: 124px;
-        line-height: 124px;
-      }
-      .thermometer, .order, .social {
-        /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
-        height: 40px;
-        line-height: 40px;
-      }
-      div.row {
-        border: 1px solid;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row navigation">
-        <div class="span2 logo">
-          Logo
-        </div>
-        <div class="span6 blank">
-          Blank
-        </div>
-        <div class="span4 about">
-          About
-        </div>
-      </div>
-      <div class="row heading">
-        <div class="span12">
-          <h1>Bitstarter Title</h1>
-        </div>
-      </div> 
-     <div class="row subheading">
-        <div class="span12">
-          <p class="lead">This is my first bitstarter project.</p>
-        </div>
-      </div>
-      <div class="row pitch">
-        <div class="span6 video">
-          Video
-        </div>
-        <div class="span6">
-          <div class="thermometer">
-            Thermometer
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device.width, initial-scale=1.0">
+  <title>My First Bitstarter</title>
+  <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
+  <!--<link type="text/css" rel="stylesheet" href="assets/css/bootstrap.css">-->
+  <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
+  <script type="text/javascript" src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"> </script>
+  <script type="text/javascript" src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"> </script>
+  <script type="text/javascript" src="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic"></script>
+  <script type="text/javascript" src="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,300italic,400italic,500italic,700italic"></script>
+  <style type="text/css">
+
+  /*  Large desktops  */
+  @media (min-width: 980px){
+  body {
+    padding-top: 20px;
+    }
+    .linediv-l {
+      border-right: 1px white solid;
+    }
+    .linediv-r {
+      border-left: 1px white solid;
+    }
+  }
+
+  /*  Landscap phones and down  */
+  @media (max-width: 980px){
+    .copy {
+      padding: 2.5% 10%;
+    }
+    .linediv-l {
+      border-bottom: 1px white solid;
+    }
+    .linediv-r {
+      border-top: 1px white solid;
+    }
+  }
+  body {
+    font-family: 'Open Sans',Helvetica, Arial, sans-serif;
+  }
+  .heading, .subheading {
+    font-family: 'Ubuntu', ,Helvetica, Arial, sans-serif;
+    text-align: center;
+  }
+  p.lead {
+    padding-top: 1.5%;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .pitch {
+    padding: 2.5% 0%;
+  }
+
+  .order {
+    padding: 2% 0%;
+  }
+
+  .actions {
+    background-color: #343434;
+    padding: 3% 0%;
+  }
+
+  /*.navigation, .pitch, .section1, .section2, .faq, .footer {
+    padding: 10px 0px 10px 0px;
+  }*/
+  .video, .thermometer, .order, .social {
+    text-align: center;
+  }
+
+  .statistics h3, .statistics p {
+    color: white;
+  }
+
+  /*  Useful? */
+  .video {
+    /* Internal borders have 1px width, thus need to add 4 x 1px to 120px. */
+    height: 124px;
+    line-height: 124px;
+  }
+  .thermometer, .order, .social {
+    /* line-height to vertically center: http://phrogz.net/css/vertical-align/index.html */
+    height: 40px;
+    line-height: 40px;
+  }
+  div.row {
+    border: 1px solid;
+  }
+  /*  Marketting Copy and footer  */
+  .copy {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    text-align: justify;
+  }
+  .asset {
+    padding: 2.5% 0%;
+  }
+  .footer {
+    color: #cccccc;
+    text-align: center;
+  }
+  .footer p {
+    font-size: 11px;
+  }
+  .footer a {
+    color: #ccccff;
+  }
+
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <section class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="navbar-inner">
+      <div class="container ">
+        <div class="row navigation">
+          <div class="span2 logo">
+            Logo
           </div>
-          <div class="order">
-            Order
+          <div class="span6 blank">
+            Blank
           </div>
-          <div class="social">
-            Social
+          <div class="span4 about">
+            About
           </div>
         </div>
       </div>
-      <div class="row section1">
-        <div class="span12">
-          Marketing Section 1
-        </div>
+      </div
+    </div>
+  </div>
+
+  <div class="span12">
+    <div class="row heading">
+      <div class="span12">
+        <h1>Secure Message</h1>
       </div>
-      <div class="row section2">
-        <div class="span12">
-          Marketing Section 2
-        </div>
+    </div>
+
+
+    <div class="row subheading span12 fluid">
+      <div class="h">
+        <p class="lead">We care about your secutiry. Just send messages. No one else could read them.</p>
       </div>
-      <div class="row faq">
-        <div class="span12">
-          FAQ
-        </div>
+    </div>
+    <div class="row pitch span12">
+      <div class="span6 video">
+        Video
       </div>
-      <div class="row footer">
-        <div class="span12">
-          Footer
+      <div class="span6">
+        <div class="thermometer">
+          Thermometer
+        </div>
+        <div class="order">
+          Order
+        </div>
+        <div class="social">
+          Social
         </div>
       </div>
     </div>
-  </body>
+
+    <div class="row section1 span12">
+
+      <div class="span5">
+        <p>You care about privacy?
+          You care about YOUR security?
+          You don't like strangers to read your private discuss?
+          Join the movement. Talk free!</p>
+        </div>
+        <div class="span5">
+          Marketing Picture 1
+        </div>
+      </div>
+
+      <div class="row section2 span12">
+        <div class="span5">
+          Marketing Picture 2
+        </div>
+        <div class="span5">
+          Marketing Text 2
+        </div>
+      </div>
+    </section>
+    <div class="row faq">
+      <div class="span12">
+        FAQ
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="span12">
+        Footer
+      </div>
+    </div>
+
+  </div>
+</body>
 </html>
