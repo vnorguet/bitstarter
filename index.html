@@ -16,8 +16,8 @@
 
   /*  Large desktops  */
   @media (min-width: 980px){
-  body {
-    padding-top: 20px;
+    body {
+      padding-top: 20px;
     }
     .linediv-l {
       border-right: 1px white solid;
@@ -69,10 +69,6 @@
     background-color: #343434;
     padding: 3% 0%;
   }
-
-  /*.navigation, .pitch, .section1, .section2, .faq, .footer {
-    padding: 10px 0px 10px 0px;
-  }*/
   .video, .thermometer, .order, .social {
     text-align: center;
   }
@@ -119,23 +115,25 @@
 </head>
 <body>
   <!-- HEADER -->
-  <section class="navbar navbar-inverse navbar-fixed-top">
-
+  <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container ">
-        <div class="row navigation">
-          <div class="span2 logo">
-            Logo
-          </div>
-          <div class="span6 blank">
-            Blank
-          </div>
-          <div class="span4 about">
-            About
-          </div>
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+          
+        <a class="brand" href='#'>Bitstarter</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href='#'>Home</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse-->
         </div>
       </div>
-      </div
     </div>
   </div>
 
